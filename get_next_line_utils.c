@@ -78,13 +78,13 @@ char	*gnl_extract_line(char *saved)
 	if (!line)
 		return (NULL);
 	i = 0;
-	while (saved[i] && saved[i] != '\n')
+	while (saved[i] && saved[i] != SEPARATOR)
 	{
 		line[i] = saved[i];
 		i++;
 	}
-	if (saved[i] == '\n')
-		line[i++] = '\n';
+	if (saved[i] == SEPARATOR)
+		line[i++] = SEPARATOR;
 	line[i] = '\0';
 	return (line);
 }
@@ -95,7 +95,7 @@ char	*gnl_get_remainder(char *saved)
 	char	*remainder;
 	size_t	i;
 
-	newline = gnl_strchr(saved, '\n');
+	newline = gnl_strchr(saved, SEPARATOR);
 	if (!newline)
 	{
 		free(saved);
