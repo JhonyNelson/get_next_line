@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jhcosta- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jhcosta- <jhcosta-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/04 16:47:16 by jhcosta-          #+#    #+#             */
 /*   Updated: 2026/08/04 16:47:25 by jhcosta-         ###   ########.fr       */

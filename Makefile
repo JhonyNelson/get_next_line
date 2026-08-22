@@ -3,7 +3,7 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jhcosta- <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: jhcosta- <jhcosta-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/08/04 16:49:10 by jhcosta-          #+#    #+#              #
 #    Updated: 2026/08/04 16:49:12 by jhcosta-         ###   ########.fr        #
