@@ -5,7 +5,7 @@
 ## Description
 
 `get_next_line` is a 42 project whose goal is to implement a function that reads
-and returns, one call at a time, a single line from a file descriptor — no
+and returns, one call at a time, a single line from a file descriptor, no
 matter if the descriptor points to a regular file, a pipe, or the standard
 input. The returned line always keeps its trailing `\n`, except when the end
 of the file is reached and the file does not end with one.
@@ -22,8 +22,7 @@ file descriptor, no `_bonus` files).
 
 ### Compilation
 
-The project is compiled as a static library, exactly as the subject requires
-(with and without the `-D BUFFER_SIZE` flag):
+The project is compiled as a static library (with and without the `-D BUFFER_SIZE` flag):
 
 ```bash
 make                     # BUFFER_SIZE defaults to 42
@@ -43,6 +42,7 @@ cc -Wall -Wextra -Werror -D BUFFER_SIZE=42 get_next_line.c get_next_line_utils.c
 ```c
 #include "get_next_line.h"
 #include <fcntl.h>
+#include <stdio.h>
 
 int main(void)
 {
@@ -92,6 +92,11 @@ much larger than a line.
 - `man 2 read`, `man 3 malloc`, `man 3 free`
 - 42 Norm (norminette) documentation
 - General articles on C `static` variables and their scope/lifetime
+- Subject "get_next_line.pdf"
 
 ### AI usage
 
+- AI tools were used to support the study of C concepts.
+- AI tools were used to review the implementation.
+- AI tools were used to suggest test cases and edge cases.
+- AI tools were used to assist with the documentation.
