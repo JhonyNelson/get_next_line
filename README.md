@@ -31,7 +31,7 @@ make BUFFER_SIZE=5       # custom buffer size
 
 This produces `libgnl.a`. Other rules available: `clean`, `fclean`, `re`.
 
-You can also compile the sources directly, the way the Moulinette does:
+You can also compile the sources directly:
 
 ```bash
 cc -Wall -Wextra -Werror -D BUFFER_SIZE=42 get_next_line.c get_next_line_utils.c your_main.c -o test
