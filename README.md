@@ -22,22 +22,39 @@ file descriptor, no `_bonus` files).
 
 ### Compilation
 
-The project is compiled as a static library (with and without the `-D BUFFER_SIZE` flag):
+The project can be compiled directly with `cc` using the required flags:
 
 ```bash
-make                     # BUFFER_SIZE defaults to 42
-make BUFFER_SIZE=5       # custom buffer size
+cc -Wall -Wextra -Werror -D BUFFER_SIZE=42 get_next_line.c get_next_line_utils.c main.c -o test
 ```
 
-This produces `libgnl.a`. Other rules available: `clean`, `fclean`, `re`.
-
-You can also compile the sources directly:
+`BUFFER_SIZE` can be changed to any positive value during compilation:
 
 ```bash
-cc -Wall -Wextra -Werror -D BUFFER_SIZE=42 get_next_line.c get_next_line_utils.c your_main.c -o test
+cc -Wall -Wextra -Werror -D BUFFER_SIZE=5 get_next_line.c get_next_line_utils.c main.c -o test
 ```
 
-### Usage
+The project can also be compiled without explicitly defining `BUFFER_SIZE`:
+
+```bash
+cc -Wall -Wextra -Werror get_next_line.c get_next_line_utils.c main.c -o test
+```
+
+In this case, the default value defined in `get_next_line.h` is used:
+
+```c
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
+```
+
+After compilation, run the executable with:
+
+```bash
+./test
+```
+
+### `main.c` (example)
 
 ```c
 #include "get_next_line.h"
