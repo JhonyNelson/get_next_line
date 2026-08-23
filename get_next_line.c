@@ -93,8 +93,12 @@ char	*get_next_line(int fd)
 {
 	static char	*saved;
 
-	if (fd < 0 || BUFFER_SIZE <= 0)
+	if (fd < 0 || BUFFER_SIZE <= 0 || read(fd, NULL, 0) < 0)
+	{
+		free(saved);
+		saved = NULL;
 		return (NULL);
+	}
 	saved = read_to_saved(fd, saved);
 	if (!saved)
 		return (NULL);
